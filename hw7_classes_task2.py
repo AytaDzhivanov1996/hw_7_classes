@@ -12,7 +12,10 @@ def read_file_timed(file):
     else:
         print(f.read())
         f.close()
-        print(f'Time required for {file} = {start_time}')
+        print(f'Time required for {file} = {time.time() - start_time}')
         return f
     finally:
         print('Finishing...')
+
+
+video_data = read_file_timed('video.mp4')
